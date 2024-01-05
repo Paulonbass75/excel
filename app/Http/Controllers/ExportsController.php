@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers
+namespace App\Http\Controllers;
 use Maatwebsite\Excel\Facades\Excel;
 
 use App\Exports\UsersExport;
@@ -12,6 +12,7 @@ class ExportsController extends Controller
     public function export()
     {
         $users = User::all();
+        $orders = Order::all();
         return Excel::download(new UsersExport($users), 'users.xlsx');
     }
 }

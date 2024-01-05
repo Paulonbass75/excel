@@ -17,11 +17,19 @@ class UsersExport implements FromArray, WithHeadings
      */
     public function headings(): array {
         return [
+            [
             '#',
             'Name',
             'Email',
-            'Address'
+            'Address',
             'Phone Number'
+            ],
+           [ 'Row 2',
+            'Name',
+            'Email',
+            'Address',
+            ']Phone Number'
+        ]
         ];
 
         }

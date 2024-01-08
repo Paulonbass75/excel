@@ -32,6 +32,13 @@ class UsersExport implements FromArray, WithHeadings, WithMapping
          return $this->data->toArray();
      }
 
+     public function preparedRows ($rows)
+     {
+        forEach ($rows as $key => $user)  {
+            $rows[$key]['name'] .='(prepared)';
+        }
+    }
+
     /**
      * @param mixed $row    
      * @return array

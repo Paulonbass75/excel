@@ -24,4 +24,5 @@ Route::get('/', function () {
 //     return Excel::download(new UsersExport, 'users.xlsx');
 // })->name('users.export');
 
-Route::get('users/export/', [ExportsController::class, 'export'])->name('export');
+Route::get('export/', [ExportsController::class, 'export'])->name('export');
+Route::get('import/', [ExportsController::class, 'import'])->name('import');

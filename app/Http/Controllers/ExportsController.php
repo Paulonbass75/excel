@@ -20,8 +20,8 @@ class ExportsController extends Controller
         return (new UsersExport($users))->download('users.xlsx');
     //    return (new UsersExport($users));
     }
-    public function import() {
-        Excel::import(new UserImport, 'Users_import_1.xlsx');
-        return redirect('/')->with('success', 'All good!');
-}
+//     public function import() {
+//         Excel::import(new UserImport, 'Users_import_1.xlsx');
+//         return redirect('/')->with('success', 'All good!');
+// }
 }

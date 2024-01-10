@@ -4,6 +4,7 @@ use App\Exports\UsersExport;
 use Maatwebsite\Excel\Facades\Excel;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ExportsController;
+use App\Http\Controllers\ImportsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,4 +26,4 @@ Route::get('/', function () {
 // })->name('users.export');
 
 Route::get('export/', [ExportsController::class, 'export'])->name('export');
-Route::get('import/', [ExportsController::class, 'import'])->name('import');
+Route::post('import/', [ImportsController::class, 'import'])->name('import');

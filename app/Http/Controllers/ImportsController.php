@@ -10,12 +10,15 @@ use Maatwebsite\Excel\Facades\Excel;
 
 class ImportsController extends Controller
 {
-    public function fileImportExport()
+    public function show()
     {
-        return view('file-import');
+        $users = User::all();
+        return view('users\import', ['users' => $users]);
     }
-    public function import() {
-        Excel::import(new UserImport, request()-file ('Users_import_1.xlsx'));
-        return redirect('/')->with('success', 'All good!');
-}
+    public function store(Request $request)
+    {
+       $file = $request->file('file');
+       Excel::import(new UserImport, $file);
+       return back()->with('success', 'All good!');
+    }
 }

@@ -13,7 +13,7 @@ class ImportsController extends Controller
     public function show()
     {
         $users = User::all();
-        return view('users\import', ['users' => $users]);
+        return view('\users\import', ['users' => $users]);
     }
     public function store(Request $request)
     {

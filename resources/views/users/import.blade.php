@@ -11,7 +11,7 @@
         <h2 class="mb-4">
             Import and Export CSV & Excel to Database 
         </h2>
-        <form action="users/import" method="POST" enctype="multipart/form-data">
+        <form action="/users/import" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="form-group mb-4" style="max-width: 500px; margin: 0 auto;">
                 <div class="custom-file text-left">
